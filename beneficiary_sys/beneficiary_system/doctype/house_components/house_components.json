@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2021-07-15 15:02:11.041715",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "component_type",
+  "number"
+ ],
+ "fields": [
+  {
+   "fieldname": "component_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Component Type",
+   "options": "Component Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number",
+   "options": "Component Type",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-15 15:35:01.010154",
+ "modified_by": "Administrator",
+ "module": "Beneficiary System",
+ "name": "House Components",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

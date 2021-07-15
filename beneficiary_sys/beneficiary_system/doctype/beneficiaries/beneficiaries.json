@@ -1,0 +1,489 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-07-15 12:40:27.394853",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "bene_name",
+  "gender",
+  "id_no",
+  "social_status",
+  "column_break_6",
+  "date_of_birth",
+  "id_source",
+  "nationality",
+  "notes_b",
+  "bank_account_section",
+  "bank_name",
+  "column_break_13",
+  "ibaan",
+  "add_bank",
+  "contact_details_section",
+  "mobile_no",
+  "phone",
+  "column_break_19",
+  "email",
+  "address",
+  "qualification_job_section",
+  "educational_level",
+  "work",
+  "training_courses",
+  "column_break_27",
+  "career_field",
+  "can_work_in",
+  "notes_q_j",
+  "income_sources_section",
+  "salary",
+  "retirement",
+  "insurances",
+  "column_break_34",
+  "social_security",
+  "others",
+  "residence_info_section",
+  "region",
+  "city",
+  "neighborhood",
+  "column_break_43",
+  "home_address",
+  "accommodation_type",
+  "ownership_type",
+  "monthly_rent",
+  "section_break_48",
+  "house_components",
+  "furniture",
+  "monthly_costs_per_person",
+  "monthly_bills",
+  "notes_bill",
+  "health_data_section",
+  "health_status",
+  "column_break_54",
+  "has_a_disability",
+  "hasnt_disability",
+  "diseases_section",
+  "disease_name",
+  "disease_type",
+  "treatment_condition",
+  "column_break_60",
+  "treatment_cost",
+  "notes_disease",
+  "documents_section",
+  "document_name",
+  "column_break_66",
+  "document_type",
+  "path"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Beneficiary No",
+   "options": "BENE-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "label": "ID No.",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "social_status",
+   "fieldtype": "Link",
+   "label": "Social Status",
+   "options": "Social Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_source",
+   "fieldtype": "Data",
+   "label": "Id Source",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bene_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Nationality",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "collapsible": 1,
+   "fieldname": "bank_account_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Account"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Link",
+   "label": "Bank Name",
+   "options": "Bank",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ibaan",
+   "fieldtype": "Data",
+   "label": "IBAAN",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "qualification_job_section",
+   "fieldtype": "Section Break",
+   "label": "Qualification & Job"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_b",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "educational_level",
+   "fieldtype": "Link",
+   "label": "Educational Level",
+   "options": "Educational Level",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work",
+   "fieldtype": "Link",
+   "label": "Work",
+   "options": "Work",
+   "reqd": 1
+  },
+  {
+   "fieldname": "career_field",
+   "fieldtype": "Data",
+   "label": "Career Field"
+  },
+  {
+   "fieldname": "can_work_in",
+   "fieldtype": "Data",
+   "label": "Can Work in"
+  },
+  {
+   "fieldname": "training_courses",
+   "fieldtype": "Long Text",
+   "label": "Training Courses"
+  },
+  {
+   "fieldname": "notes_q_j",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "income_sources_section",
+   "fieldtype": "Section Break",
+   "label": "Income Sources"
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "Float",
+   "label": "Salary"
+  },
+  {
+   "fieldname": "retirement",
+   "fieldtype": "Float",
+   "label": "Retirement"
+  },
+  {
+   "fieldname": "add_bank",
+   "fieldtype": "Button",
+   "label": "ADD"
+  },
+  {
+   "fieldname": "insurances",
+   "fieldtype": "Float",
+   "label": "Insurances"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "social_security",
+   "fieldtype": "Float",
+   "label": "Social Security"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Float",
+   "label": "Others"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "residence_info_section",
+   "fieldtype": "Section Break",
+   "label": "Residence Info."
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "neighborhood",
+   "fieldtype": "Data",
+   "label": "Neighborhood",
+   "reqd": 1
+  },
+  {
+   "fieldname": "home_address",
+   "fieldtype": "Data",
+   "label": "Home Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accommodation_type",
+   "fieldtype": "Link",
+   "label": "Accommodation type",
+   "options": "Accommodation type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ownership_type",
+   "fieldtype": "Link",
+   "label": "Ownership type",
+   "options": "Ownership type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.ownership_type== 'Rent'",
+   "fieldname": "monthly_rent",
+   "fieldtype": "Data",
+   "label": "Monthly Rent"
+  },
+  {
+   "fieldname": "house_components",
+   "fieldtype": "Table",
+   "label": "House Components",
+   "options": "House Components"
+  },
+  {
+   "fieldname": "furniture",
+   "fieldtype": "Table",
+   "label": "Furniture",
+   "options": "Furniture"
+  },
+  {
+   "fieldname": "monthly_costs_per_person",
+   "fieldtype": "Float",
+   "label": "Monthly costs per person"
+  },
+  {
+   "fieldname": "monthly_bills",
+   "fieldtype": "Float",
+   "label": "Monthly bills"
+  },
+  {
+   "fieldname": "notes_bill",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "health_data_section",
+   "fieldtype": "Section Break",
+   "label": "Health data"
+  },
+  {
+   "fieldname": "health_status",
+   "fieldtype": "Link",
+   "label": "Health status",
+   "options": "Health Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_a_disability",
+   "fieldtype": "Check",
+   "label": "Has a Disability"
+  },
+  {
+   "default": "0",
+   "fieldname": "hasnt_disability",
+   "fieldtype": "Check",
+   "label": "hasn't disability"
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "eval:doc.health_status== 'Disease'",
+   "fieldname": "diseases_section",
+   "fieldtype": "Section Break",
+   "label": "Diseases"
+  },
+  {
+   "fieldname": "disease_name",
+   "fieldtype": "Link",
+   "label": "Disease Name",
+   "options": "Disease Name"
+  },
+  {
+   "fieldname": "disease_type",
+   "fieldtype": "Link",
+   "label": "Disease Type",
+   "options": "Disease Type"
+  },
+  {
+   "fieldname": "treatment_condition",
+   "fieldtype": "Link",
+   "label": "Treatment Condition",
+   "options": "Treatment Condition"
+  },
+  {
+   "fieldname": "treatment_cost",
+   "fieldtype": "Data",
+   "label": "Treatment Cost"
+  },
+  {
+   "fieldname": "notes_disease",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_60",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Data",
+   "label": "Document Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "Document Type"
+  },
+  {
+   "fieldname": "path",
+   "fieldtype": "Attach",
+   "label": "Path"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_48",
+   "fieldtype": "Section Break",
+   "label": "House Info."
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_66",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-15 18:32:58.389238",
+ "modified_by": "Administrator",
+ "module": "Beneficiary System",
+ "name": "Beneficiaries",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

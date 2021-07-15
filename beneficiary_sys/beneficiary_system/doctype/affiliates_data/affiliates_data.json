@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "creation": "2021-07-15 16:53:56.810019",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "beneficiary_name",
+  "full_name",
+  "gender",
+  "relative_relations",
+  "id_no",
+  "date_of_birth",
+  "mobile_no",
+  "age_level",
+  "work",
+  "career_field",
+  "monthly_income",
+  "orphan",
+  "not_orphan",
+  "educational_level",
+  "educational_side",
+  "study_year",
+  "monthly_expense_cost",
+  "health_status",
+  "has_a_disability",
+  "hasnt_disability"
+ ],
+ "fields": [
+  {
+   "fieldname": "beneficiary_name",
+   "fieldtype": "Link",
+   "label": "Beneficiary Name",
+   "options": "Beneficiaries"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relative_relations",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relative Relations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Id No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No."
+  },
+  {
+   "fieldname": "age_level",
+   "fieldtype": "Data",
+   "label": "Age Level",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Adult'",
+   "fieldname": "work",
+   "fieldtype": "Data",
+   "label": "Work"
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Adult'",
+   "fieldname": "career_field",
+   "fieldtype": "Data",
+   "label": "Career Field"
+  },
+  {
+   "fieldname": "monthly_income",
+   "fieldtype": "Data",
+   "label": "Monthly Income"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "orphan",
+   "fieldtype": "Check",
+   "label": "Orphan"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "not_orphan",
+   "fieldtype": "Check",
+   "label": "Not Orphan"
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "educational_level",
+   "fieldtype": "Data",
+   "label": "Educational level"
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "educational_side",
+   "fieldtype": "Data",
+   "label": "Educational Side"
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "study_year",
+   "fieldtype": "Data",
+   "label": "Study Year"
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "monthly_expense_cost",
+   "fieldtype": "Float",
+   "label": "Monthly expense cost"
+  },
+  {
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "health_status",
+   "fieldtype": "Data",
+   "label": "Health Status"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "has_a_disability",
+   "fieldtype": "Check",
+   "label": "Has a Disability"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.age_level== 'Student'",
+   "fieldname": "hasnt_disability",
+   "fieldtype": "Check",
+   "label": "Hasn't Disability"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-15 17:30:19.387015",
+ "modified_by": "Administrator",
+ "module": "Beneficiary System",
+ "name": "Affiliates data",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
