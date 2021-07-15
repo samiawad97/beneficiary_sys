@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2021-07-15 16:53:56.810019",
+ "creation": "2021-07-15 19:21:38.655925",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -9,6 +9,7 @@
   "full_name",
   "gender",
   "relative_relations",
+  "column_break_5",
   "id_no",
   "date_of_birth",
   "mobile_no",
@@ -24,7 +25,12 @@
   "monthly_expense_cost",
   "health_status",
   "has_a_disability",
-  "hasnt_disability"
+  "hasnt_disability",
+  "disease_name",
+  "disease_type",
+  "treatment_condition",
+  "treatment_cost",
+  "notes"
  ],
  "fields": [
   {
@@ -50,9 +56,10 @@
   },
   {
    "fieldname": "relative_relations",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Relative Relations",
+   "options": "Relative Relations",
    "reqd": 1
   },
   {
@@ -75,8 +82,9 @@
   },
   {
    "fieldname": "age_level",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Age Level",
+   "options": "Age Level",
    "reqd": 1
   },
   {
@@ -92,6 +100,7 @@
    "label": "Career Field"
   },
   {
+   "depends_on": "eval:doc.ownership_type== 'Adult'",
    "fieldname": "monthly_income",
    "fieldtype": "Data",
    "label": "Monthly Income"
@@ -113,8 +122,9 @@
   {
    "depends_on": "eval:doc.age_level== 'Student'",
    "fieldname": "educational_level",
-   "fieldtype": "Data",
-   "label": "Educational level"
+   "fieldtype": "Link",
+   "label": "Educational level",
+   "options": "Educational Level"
   },
   {
    "depends_on": "eval:doc.age_level== 'Student'",
@@ -137,8 +147,9 @@
   {
    "depends_on": "eval:doc.age_level== 'Student'",
    "fieldname": "health_status",
-   "fieldtype": "Data",
-   "label": "Health Status"
+   "fieldtype": "Link",
+   "label": "Health Status",
+   "options": "Health Status"
   },
   {
    "default": "0",
@@ -153,14 +164,55 @@
    "fieldname": "hasnt_disability",
    "fieldtype": "Check",
    "label": "Hasn't Disability"
+  },
+  {
+   "depends_on": "eval:doc.ownership_type== 'Student'",
+   "fieldname": "disease_name",
+   "fieldtype": "Link",
+   "label": "Disease Name",
+   "options": "Disease Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.ownership_type== 'Student'",
+   "fieldname": "disease_type",
+   "fieldtype": "Link",
+   "label": "Disease Type",
+   "options": "Disease Type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.ownership_type== 'Student'",
+   "fieldname": "treatment_condition",
+   "fieldtype": "Link",
+   "label": "Treatment Condition",
+   "options": "Treatment Condition",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.ownership_type== 'Student'",
+   "fieldname": "treatment_cost",
+   "fieldtype": "Float",
+   "label": "Treatment Cost",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.ownership_type== 'Student'",
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-15 17:30:19.387015",
+ "modified": "2021-07-15 19:48:51.113301",
  "modified_by": "Administrator",
  "module": "Beneficiary System",
- "name": "Affiliates data",
+ "name": "Affiliate",
  "owner": "Administrator",
  "permissions": [
   {

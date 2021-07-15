@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestAffiliatesdata(unittest.TestCase):
+class TestAgeLevel(unittest.TestCase):
 	pass
