@@ -6,12 +6,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "receipt_type",
+  "cash_type",
   "column_break_2",
   "cash_classification",
   "reciept_details_section",
   "naming_series",
-  "reciept_date",
+  "cash_date",
   "registration_no",
   "currency",
   "amount",
@@ -23,6 +23,7 @@
   "partner_name",
   "partner_account",
   "cost_center",
+  "project_name",
   "delegate_name",
   "terms_of_payment_days",
   "branch",
@@ -50,14 +51,6 @@
  ],
  "fields": [
   {
-   "fieldname": "receipt_type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Cash type",
-   "options": "Reciept type",
-   "reqd": 1
-  },
-  {
    "collapsible": 1,
    "fieldname": "reciept_details_section",
    "fieldtype": "Section Break",
@@ -71,14 +64,8 @@
    "reqd": 1
   },
   {
-   "fieldname": "reciept_date",
-   "fieldtype": "Date",
-   "label": "Cash Date",
-   "reqd": 1
-  },
-  {
    "fieldname": "registration_no",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Registration No.",
    "reqd": 1,
    "search_index": 1
@@ -277,13 +264,34 @@
   },
   {
    "fieldname": "cash_classification",
-   "fieldtype": "Data",
-   "label": "Cash classification"
+   "fieldtype": "Link",
+   "label": "Cash classification",
+   "options": "Cash classification"
+  },
+  {
+   "fieldname": "cash_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cash type",
+   "options": "Cash type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Project Name",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cash_date",
+   "fieldtype": "Date",
+   "label": "Cash Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-18 18:42:31.932153",
+ "modified": "2021-07-19 00:05:21.093507",
  "modified_by": "Administrator",
  "module": "Beneficiary System",
  "name": "Cash receipt",

@@ -76,8 +76,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Donation classification",
-   "options": "Donation classification",
-   "reqd": 1
+   "options": "Donation classification"
   },
   {
    "depends_on": "eval:doc.donation_classification== 'Project'",
@@ -338,7 +337,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-18 18:50:24.934401",
+ "modified": "2021-07-18 23:59:23.488289",
  "modified_by": "Administrator",
  "module": "Beneficiary System",
  "name": "Receipt",
