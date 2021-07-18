@@ -1,21 +1,14 @@
 {
  "actions": [],
  "autoname": "naming_series:",
- "creation": "2021-07-17 23:12:25.813078",
+ "creation": "2021-07-18 18:22:45.433494",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "receipt_type",
-  "donation_details_section",
-  "donation_classification",
-  "project_name",
-  "donation_amount",
-  "column_break_6",
-  "beneficiary_name",
-  "donation_amount_for_beneficiary",
-  "affiliate_name",
-  "amount_of_donation_to_the_affiliate",
+  "column_break_2",
+  "cash_classification",
   "reciept_details_section",
   "naming_series",
   "reciept_date",
@@ -60,87 +53,34 @@
    "fieldname": "receipt_type",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Receipt type",
+   "label": "Cash type",
    "options": "Reciept type",
    "reqd": 1
   },
   {
    "collapsible": 1,
-   "depends_on": "eval:doc.receipt_type== 'Donation Receipt'",
-   "fieldname": "donation_details_section",
-   "fieldtype": "Section Break",
-   "label": "Donation details"
-  },
-  {
-   "fieldname": "donation_classification",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Donation classification",
-   "options": "Donation classification",
-   "reqd": 1
-  },
-  {
-   "depends_on": "eval:doc.donation_classification== 'Project'",
-   "fieldname": "project_name",
-   "fieldtype": "Link",
-   "label": "Project Name",
-   "options": "Project"
-  },
-  {
-   "depends_on": "eval:doc.donation_classification== 'Project'",
-   "fieldname": "donation_amount",
-   "fieldtype": "Float",
-   "label": "Donation amount for Project"
-  },
-  {
-   "depends_on": "eval:doc.donation_classification== 'Beneficiary'",
-   "fieldname": "beneficiary_name",
-   "fieldtype": "Link",
-   "label": "Beneficiary Name",
-   "options": "Beneficiaries"
-  },
-  {
-   "depends_on": "eval:doc.donation_classification== 'Beneficiary'",
-   "fieldname": "donation_amount_for_beneficiary",
-   "fieldtype": "Float",
-   "label": "Donation amount for beneficiary"
-  },
-  {
-   "depends_on": "eval:doc.donation_classification== 'Affiliate'",
-   "fieldname": "affiliate_name",
-   "fieldtype": "Link",
-   "label": "Affiliate name",
-   "options": "Affiliate"
-  },
-  {
-   "depends_on": "eval:doc.donation_classification== 'Affiliate'",
-   "fieldname": "amount_of_donation_to_the_affiliate",
-   "fieldtype": "Data",
-   "label": "Amount of donation to the affiliate"
-  },
-  {
-   "collapsible": 1,
    "fieldname": "reciept_details_section",
    "fieldtype": "Section Break",
-   "label": "Reciept Details"
+   "label": "Cash Details"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "label": "Receipt No.",
-   "options": "REC-",
+   "label": "Cash No.",
+   "options": "CASH-",
    "reqd": 1
   },
   {
    "fieldname": "reciept_date",
    "fieldtype": "Date",
-   "label": "Reciept Date",
+   "label": "Cash Date",
    "reqd": 1
   },
   {
    "fieldname": "registration_no",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Registration No.",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -155,6 +95,13 @@
    "fieldtype": "Float",
    "label": "Amount",
    "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "record_status",
+   "fieldtype": "Data",
+   "label": "Record status",
+   "read_only": 1
   },
   {
    "fieldname": "description",
@@ -175,6 +122,10 @@
    "fieldtype": "Data",
    "label": "Partner Type",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
   },
   {
    "depends_on": "eval:doc.donation_classification== 'Project' || doc.donation_classification== 'Beneficiary'",
@@ -206,16 +157,10 @@
    "label": "Terms of payment (Days)"
   },
   {
-   "fieldname": "notes",
-   "fieldtype": "Text",
-   "label": "Notes"
-  },
-  {
-   "default": "Active",
-   "fieldname": "record_status",
-   "fieldtype": "Data",
-   "label": "Record status",
-   "read_only": 1
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
   },
   {
    "fieldname": "create_date",
@@ -223,10 +168,9 @@
    "label": "Create Date"
   },
   {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "label": "Branch",
-   "options": "Branch"
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
   },
   {
    "collapsible": 1,
@@ -284,6 +228,15 @@
    "options": "UOM"
   },
   {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "unit_price",
    "fieldtype": "Int",
    "label": "Unit Price"
@@ -319,29 +272,21 @@
    "label": "Description"
   },
   {
-   "fieldname": "total",
-   "fieldtype": "Float",
-   "label": "Total"
-  },
-  {
-   "fieldname": "column_break_19",
+   "fieldname": "column_break_2",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_40",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_6",
-   "fieldtype": "Column Break"
+   "fieldname": "cash_classification",
+   "fieldtype": "Data",
+   "label": "Cash classification"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-18 18:50:24.934401",
+ "modified": "2021-07-18 18:42:31.932153",
  "modified_by": "Administrator",
  "module": "Beneficiary System",
- "name": "Receipt",
+ "name": "Cash receipt",
  "owner": "Administrator",
  "permissions": [
   {
