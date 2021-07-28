@@ -34,7 +34,7 @@ frappe.query_reports["Reciept"] = {
 	{
 		"fieldname":"partner_name",
 		"label": __("Partner Name"),
-		"fieldtype": "Select",
+		"fieldtype": "Data",
 		"options": "",
 		"default":""
 	},
