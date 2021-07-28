@@ -53,8 +53,7 @@
   "total_after_discount",
   "added_tax_rate",
   "net",
-  "description_2",
-  "test"
+  "description_2"
  ],
  "fields": [
   {
@@ -334,16 +333,11 @@
   {
    "fieldname": "column_break_6",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "test",
-   "fieldtype": "Data",
-   "label": "test"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-28 11:39:23.464871",
+ "modified": "2021-07-28 11:41:47.732294",
  "modified_by": "Administrator",
  "module": "Beneficiary System",
  "name": "Receipt",
